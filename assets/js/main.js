@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
             target = target.length ? target : $('[name="' + this.hash.slice(1) + '"]');
             if (target.length) {
                 $('html, body').animate({
-                    scrollTop: (target.offset().top - 40) // Ajusta este valor si la barra de navegación fija cubre parte de la sección
+                    scrollTop: (target.offset().top - 40) // Ajusta si la navbar fija cubre la sección
                 }, 1000);
                 if ($('.navbar-toggle').css('display') !== 'none') {
                     $(this).closest('.container').find(".navbar-toggle").trigger("click");
@@ -35,9 +35,9 @@ jQuery(document).ready(function ($) {
     // 3. Cambio de Fondo del Menú al Desplazarse
     // ---------------------------------------------------
     var windowWidth = $(window).width();
-    if (windowWidth > 757) { // Ajusta este valor según el punto de quiebre de tu diseño responsivo
+    if (windowWidth > 757) {
         $(window).scroll(function () {
-            if ($(this).scrollTop() > 200) { // Ajusta este valor según cuándo quieras que cambie el fondo
+            if ($(this).scrollTop() > 200) {
                 $('.navbar').fadeIn(200);
                 $('.navbar').addClass('menu-bg');
             } else {
@@ -50,7 +50,7 @@ jQuery(document).ready(function ($) {
     // 4. Botón de Scroll Up
     // ---------------------------------------------------
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 600) { // Muestra el botón después de 600px de desplazamiento
+        if ($(this).scrollTop() > 600) {
             $('.scrollup').fadeIn('slow');
         } else {
             $('.scrollup').fadeOut('slow');
@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
     });
 
     $('.scrollup').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 1000); // Desplazamiento suave hacia arriba
+        $("html, body").animate({ scrollTop: 0 }, 1000);
         return false;
     });
 
@@ -74,57 +74,43 @@ jQuery(document).ready(function ($) {
     // 6. Inicialización de WOW.js
     // ---------------------------------------------------
     var wow = new WOW({
-        boxClass:     'wow',      // Clase CSS para elementos a animar
-        animateClass: 'animated', // Clase CSS para animaciones
-        offset:       0,          // Distancia desde el viewport para activar la animación
-        mobile:       false,      // Desactivar animaciones en dispositivos móviles
-        live:         true        // Activa la observación de DOM en vivo
+        boxClass:     'wow',
+        animateClass: 'animated',
+        offset:       0,
+        mobile:       false,
+        live:         true
     });
     wow.init();
 
     // ---------------------------------------------------
-    // 7. Inicialización de OWL Carousel (Comentado)
+    // 7. Inicialización de Bootstrap Carousel
     // ---------------------------------------------------
-    // Si decides usar OWL Carousel en el futuro, descomenta y ajusta el siguiente código.
-    /*
-    $('.testimonials').owlCarousel({
-        responsiveClass: true,
-        autoplay: false,
-        items: 1,
-        loop: true,
-        dots: true,
-        autoplayHoverPause: true
-    });
-    */
+    if ($('#carousel-example-generic').length) {
+        $('#carousel-example-generic').carousel({
+            interval: 2000, // Cambia de slide cada 3 segundos
+            pause: "hover"  // Pausa el carrusel al pasar el mouse
+        });
+    }
 
     // ---------------------------------------------------
-    // 8. Inicialización del Mapa
+    // 8. Inicialización del Mapa (Leaflet)
     // ---------------------------------------------------
-    // Verificar que el contenedor del mapa exista
     if ($('#map').length) {
-        // Crear el mapa centrado en una ubicación promedio
-        var map = L.map('map').setView([20.0, -100.0], 3); // Coordenadas centradas en el Caribe
+        var map = L.map('map').setView([20.0, -100.0], 3);
 
-        // Añadir la capa de OpenStreetMap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Función para crear marcadores con popups
         function addMarker(lat, lon, popupContent) {
             L.marker([lat, lon]).addTo(map)
                 .bindPopup(popupContent)
                 .openPopup();
         }
 
-        // Añadir Marcadores
-        // Puerto Rico
+        // Ejemplos de marcadores
         addMarker(18.2208, -66.5901, '<b>Puerto Rico</b>');
-
-        // North Dakota
         addMarker(47.5515, -101.0020, '<b>North Dakota, USA</b>');
-
-        // Costa Rica
         addMarker(9.7489, -83.7534, '<b>Costa Rica</b>');
     }
 });
