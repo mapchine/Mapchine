@@ -879,25 +879,24 @@ socio-copyright .social a:hover i {
     color: #ffffff; 
 }
 
+
 .social a i {
-    font-size: 30px;    /* Aumenta el tamaño de fuente para agrandar el ícono */
-    width: 40px;        /* Ajusta el ancho */
-    height: 40px;       /* Ajusta la altura */
-    line-height: 40px;  /* Alinea verticalmente el ícono si es un contenedor cuadrado */
-    text-align: center; /* Centra el ícono en horizontal */
-    border-radius: 50%; /* Opcional, para dar forma circular */
-    display: inline-block; /* Asegura que width/height funcionen con i */
-    transition: 0.3s;   /* Transición suave para hover, etc. */
+    font-size: 30px;          /* Tamaño del ícono */
+    width: 40px;              /* Ancho del contenedor */
+    height: 40px;             /* Altura del contenedor */
+    line-height: 40px;        /* Para centrar verticalmente el ícono */
+    text-align: center;       /* Centrado horizontal */
+    border-radius: 50%;       /* Forma circular */
+    display: inline-block;    /* Para que se apliquen width/height */
+    transition: 0.3s;         /* Transición suave */
+    background-color: #CD853F; /* Color base (arcilla) */
+    color: #ffffff;           /* Color del ícono (blanco) */
 }
 
-/* Si deseas cambiar el color de fondo o de texto al pasar el mouse */
 .social a i:hover {
-    background-color: #000;  /* Ejemplo de fondo negro */
-    color: #fff;             /* Texto blanco */
+    background-color: #A52A2A; /* Tono más oscuro al hacer hover */
+    color: #ffffff;
 }
-
-
-
 
 
 
@@ -950,3 +949,6 @@ socio-copyright .social a:hover i {
         height: 300px;
     }
 }
+
+
+
