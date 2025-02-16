@@ -91,26 +91,4 @@ jQuery(document).ready(function ($) {
             pause: "hover"  // Pausa el carrusel al pasar el mouse
         });
     }
-
-    // ---------------------------------------------------
-    // 8. Inicialización del Mapa (Leaflet)
-    // ---------------------------------------------------
-    if ($('#map').length) {
-        var map = L.map('map').setView([20.0, -100.0], 3);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-        function addMarker(lat, lon, popupContent) {
-            L.marker([lat, lon]).addTo(map)
-                .bindPopup(popupContent)
-                .openPopup();
-        }
-
-        // Ejemplos de marcadores
-        addMarker(18.2208, -66.5901, '<b>Puerto Rico</b>');
-        addMarker(47.5515, -101.0020, '<b>North Dakota, USA</b>');
-        addMarker(9.7489, -83.7534, '<b>Costa Rica</b>');
-    }
 });
