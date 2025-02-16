@@ -10,7 +10,6 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!-- Eliminado bootstrap-theme.min.css comentado -->
 
         <!-- Animate.css para WOW.js -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -42,8 +41,8 @@
     <body data-spy="scroll" data-target="#main-navbar">
         
         <!-- Preloader -->
-        <div class='preloader'>
-            <div class='loaded'>&nbsp;</div>
+        <div class="preloader">
+            <div class="loaded">&nbsp;</div>
         </div>
 
         <!-- Barra de Navegación -->
@@ -53,7 +52,10 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only">
+                                <span class="lang-en">Toggle navigation</span>
+                                <span class="lang-es" style="display:none;">Alternar navegación</span>
+                            </span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -64,25 +66,67 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="#home"><span class="lang-en">Home</span><span class="lang-es" style="display:none;">Inicio</span><span class="sr-only">(current)</span></a></li>
-                            <li><a href="#our-portfolio"><span class="lang-en">WHAT WE DO</span><span class="lang-es" style="display:none;">QUE HACEMOS</span></a></li>
-                            <li><a href="#works-area"><span class="lang-en">HOW WE WORK</span><span class="lang-es" style="display:none;">COMO LO HACEMOS</span></a></li>
-                            <li><a href="#our-history"><span class="lang-en">VISION</span><span class="lang-es" style="display:none;">VISION</span></a></li>
-                            <li><a href="#our-project"><span class="lang-en">MARKET</span><span class="lang-es" style="display:none;">MERCADOS</span></a></li>
-                            <li><a href="#our-team"><span class="lang-en">TEAM</span><span class="lang-es" style="display:none;">EQUIPO</span></a></li>
-                            <li><a href="#our-supports"><span class="lang-en">SUPPORT</span><span class="lang-es" style="display:none;">SOPORTE</span></a></li>
-                            <li><a href="#hire-us"><span class="lang-en">CONTACT</span><span class="lang-es" style="display:none;">CONTACTO</span></a></li>
+                            <li class="active">
+                                <a href="#home">
+                                    <span class="lang-en">Home</span>
+                                    <span class="lang-es" style="display:none;">Inicio</span>
+                                    <span class="sr-only">( <span class="lang-en">current</span><span class="lang-es" style="display:none;">actual</span> )</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#our-portfolio">
+                                    <span class="lang-en">WHAT WE DO</span>
+                                    <span class="lang-es" style="display:none;">QUÉ HACEMOS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#works-area">
+                                    <span class="lang-en">HOW WE WORK</span>
+                                    <span class="lang-es" style="display:none;">CÓMO LO HACEMOS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#our-history">
+                                    <span class="lang-en">VISION</span>
+                                    <span class="lang-es" style="display:none;">VISIÓN</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#our-project">
+                                    <span class="lang-en">MARKET</span>
+                                    <span class="lang-es" style="display:none;">MERCADOS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#our-team">
+                                    <span class="lang-en">TEAM</span>
+                                    <span class="lang-es" style="display:none;">EQUIPO</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#our-supports">
+                                    <span class="lang-en">SUPPORT</span>
+                                    <span class="lang-es" style="display:none;">SOPORTE</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#hire-us">
+                                    <span class="lang-en">CONTACT</span>
+                                    <span class="lang-es" style="display:none;">CONTACTO</span>
+                                </a>
+                            </li>
 
                             <!-- Language Toggle Button -->
                             <li>
                                 <button id="lang-toggle" class="btn btn-default navbar-btn" aria-label="Toggle language">
-                                    <span class="lang-en">ES</span>
-                                    <span class="lang-es" style="display:none;">EN</span>
+                                    <!-- Se actualizará con el script -->
                                 </button>
                             </li>
 
                             <div class="contact-number text-right"> 
-                                <ul><li>(+1) 701-964-3253</li></ul>
+                                <ul>
+                                    <li>(+1) 701-964-3253</li>
+                                </ul>
                             </div>
 
                         </ul>
@@ -94,11 +138,12 @@
         <!-- Home page style -->
         <header id="home" class="sections">
             <div class="container">
-
                 <div class="row">
                     <div class="homepage-style">
 
-                        <div class="top-arrow hidden-xs text-center"><img src="assets/images/top-arrow.png" alt="" /></div>
+                        <div class="top-arrow hidden-xs text-center">
+                            <img src="assets/images/top-arrow.png" alt="Top Arrow" />
+                        </div>
 
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="unique-apps">
@@ -111,7 +156,7 @@
                                         Founded in 2022 in North Dakota (USA) our company is dedicated to providing high-quality digital mapping, cartography, remote sensing, programming, and spatial artificial intelligence services. Our mission is to deliver precise and innovative geospatial solutions tailored to meet the unique needs of our clients.
                                     </span>
                                     <span class="lang-es" style="display:none;">
-                                        Fundada en 2022 en Dakota del Norte (USA) nuestra compañia se dedica a proporcionar servicios de mapeo digital de alta calidad, cartografía, teledetección, programación e inteligencia artificial espacial. Nuestra misión es ofrecer soluciones geoespaciales precisas e innovadoras adaptadas a las necesidades únicas de nuestros clientes.
+                                        Fundada en 2022 en Dakota del Norte (USA), nuestra compañía se dedica a proporcionar servicios de mapeo digital, cartografía, teledetección, programación e inteligencia artificial espacial de alta calidad. Nuestra misión es ofrecer soluciones geoespaciales precisas e innovadoras, adaptadas a las necesidades únicas de nuestros clientes.
                                     </span>
                                 </p>
                             </div>
@@ -119,60 +164,42 @@
 
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="slider-area">
+                                <!-- Carrusel sin flechas -->
                                 <div id="carousel-example-generic" class="carousel slide wow fadeInRight" data-ride="carousel" data-interval="3000">
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                                        <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-                                    </ol>
-
+                                    <!-- Se han eliminado los controles de flechas -->
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner" role="listbox">
-
                                         <div class="item active">
-                                            <img src="assets/images/slider-img1.png" alt="GIS & CARTOGRAPHY" />
+                                            <img src="assets/images/slider-img1.png" alt="GIS &amp; CARTOGRAPHY" />
                                         </div>
-
                                         <div class="item">
                                             <img src="assets/images/slider-img2.png" alt="REMOTE SENSING" />
                                         </div>
-
                                         <div class="item">
                                             <img src="assets/images/slider-img3.png" alt="ARTIFICIAL INTELLIGENCE" />
                                         </div>
-
                                         <div class="item">
                                             <img src="assets/images/slider-img4.png" alt="CODE DEVELOPMENT" />
                                         </div>
-
                                         <div class="item">
                                             <img src="assets/images/slider-img5.png" alt="CORPORATE TRAINING" />
                                         </div>
-
                                         <div class="item">
                                             <img src="assets/images/slider-img6.png" alt="SERVER ADMINISTRATION" />
                                         </div>
-
                                     </div>
-
                                 </div>
                             </div>
                         </div>
 
                     </div>	
                 </div>
-
             </div>
         </header>
 
         <!-- Sección "What We Do" -->
         <section id="our-portfolio" class="sections">
             <div class="container">
-
                 <div class="row">
                     <div class="heading">
                         <div class="title text-center arrow-right">
@@ -187,12 +214,11 @@
 
                 <!-- Wrapper for Services -->
                 <div class="portfolio-wrap">
-
                     <!-- Fila 1: Servicios 1 y 2 -->
                     <div class="row portfolio-row">
                         <!-- Servicio 1: GIS & Cartography -->
                         <div class="col-md-6 col-sm-12 col-xs-12 portfolio-item wow fadeInUp">
-                            <img src="assets/images/slider-img1.png" class="portfolio-img img-responsive center-block" alt="GIS & Cartography" style="width:50%;" />
+                            <img src="assets/images/slider-img1.png" class="portfolio-img img-responsive center-block" alt="GIS &amp; CARTOGRAPHY" style="width:50%;" />
                             <h4 class="text-center"></h4>
                             <p class="text-center">
                                 <span class="lang-en">
@@ -203,10 +229,9 @@
                                 </span>
                             </p>
                         </div>
-
                         <!-- Servicio 2: Remote Sensing -->
                         <div class="col-md-6 col-sm-12 col-xs-12 portfolio-item wow fadeInUp">
-                            <img src="assets/images/slider-img2.png" class="portfolio-img img-responsive center-block" alt="Remote Sensing" style="width:50%;" />
+                            <img src="assets/images/slider-img2.png" class="portfolio-img img-responsive center-block" alt="REMOTE SENSING" style="width:50%;" />
                             <h4 class="text-center"></h4>
                             <p class="text-center">
                                 <span class="lang-en">
@@ -223,7 +248,7 @@
                     <div class="row portfolio-row">
                         <!-- Servicio 3: Artificial Intelligence -->
                         <div class="col-md-6 col-sm-12 col-xs-12 portfolio-item wow fadeInUp">
-                            <img src="assets/images/slider-img3.png" class="portfolio-img img-responsive center-block" alt="Artificial Intelligence" style="width:50%;" />
+                            <img src="assets/images/slider-img3.png" class="portfolio-img img-responsive center-block" alt="ARTIFICIAL INTELLIGENCE" style="width:50%;" />
                             <h4 class="text-center"></h4>
                             <p class="text-center">
                                 <span class="lang-en">
@@ -234,10 +259,9 @@
                                 </span>
                             </p>
                         </div>
-
                         <!-- Servicio 4: Code Development -->
                         <div class="col-md-6 col-sm-12 col-xs-12 portfolio-item wow fadeInUp">
-                            <img src="assets/images/slider-img4.png" class="portfolio-img img-responsive center-block" alt="Code Development" style="width:50%;" />
+                            <img src="assets/images/slider-img4.png" class="portfolio-img img-responsive center-block" alt="CODE DEVELOPMENT" style="width:50%;" />
                             <h4 class="text-center"></h4>
                             <p class="text-center">
                                 <span class="lang-en">
@@ -254,7 +278,7 @@
                     <div class="row portfolio-row">
                         <!-- Servicio 5: Corporate Training -->
                         <div class="col-md-6 col-sm-12 col-xs-12 portfolio-item wow fadeInUp">
-                            <img src="assets/images/slider-img5.png" class="portfolio-img img-responsive center-block" alt="Corporate Training" style="width:50%;" />
+                            <img src="assets/images/slider-img5.png" class="portfolio-img img-responsive center-block" alt="CORPORATE TRAINING" style="width:50%;" />
                             <h4 class="text-center"></h4>
                             <p class="text-center">
                                 <span class="lang-en">
@@ -265,10 +289,9 @@
                                 </span>
                             </p>                           
                         </div>
-
                         <!-- Servicio 6: Server Administration -->
                         <div class="col-md-6 col-sm-12 col-xs-12 portfolio-item wow fadeInUp">
-                            <img src="assets/images/slider-img6.png" class="portfolio-img img-responsive center-block" alt="Server Administration" style="width:50%;" />
+                            <img src="assets/images/slider-img6.png" class="portfolio-img img-responsive center-block" alt="SERVER ADMINISTRATION" style="width:50%;" />
                             <h4 class="text-center"></h4>
                             <p class="text-center">
                                 <span class="lang-en">
@@ -288,18 +311,15 @@
         <!-- Sección "How We Work" -->
         <section id="works-area" class="sections">
             <div class="container text-center">
-
                 <div class="heading">
                     <div class="title text-center arrow-left">
-                        <img class="hidden-xs wow fadeInLeft" src="assets/images/left-arrow.png" alt="" />
-
+                        <img class="hidden-xs wow fadeInLeft" src="assets/images/left-arrow.png" alt="Left Arrow" />
                         <h4 class="wow fadeInLeft">
                             <span class="lang-en">HOW WE WORK</span>
                             <span class="lang-es" style="display:none;">CÓMO TRABAJAMOS</span>
                         </h4>
                     </div>
                 </div>	
-
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="main-works wow fadeInUp">
@@ -313,17 +333,13 @@
         <!-- Sección "Our History" -->
         <section id="our-history" class="sections">
             <div class="container">
-
                 <div class="row">
-
                     <div class="main-history wow fadeInUp">
-
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="history-img">
                                 <img src="assets/images/history-img.png" alt="Our History" />
                             </div>
                         </div>
-
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <div class="history-wrapper">
                                 <div class="history-heading"> 
@@ -332,7 +348,6 @@
                                         <span class="lang-es" style="display:none;">Nuestra Visión</span>
                                     </h5>
                                 </div>
-
                                 <div class="history-content">
                                     <p class="wow fadeInUp">
                                         <span class="lang-en">
@@ -342,7 +357,6 @@
                                             Establecida en 2022 en Dakota del Norte, MAPCHINE LLC es una empresa joven y dinámica impulsada por el objetivo de redefinir las soluciones geoespaciales mediante la innovación, la colaboración y la dedicación. Aunque somos una empresa de reciente creación, nuestro equipo aporta años de experiencia colectiva en GIS, teledetección, programación e inteligencia artificial espacial.
                                         </span>
                                     </p>
-
                                     <p class="wow fadeInUp">
                                         <span class="lang-en">
                                             In a rapidly evolving industry, we recognize the value of partnerships in the geospatial sector to deliver innovative solutions and tackle large-scale projects. We aim to be a reliable partner, helping businesses expand their capabilities without the need for additional internal resources.
@@ -351,32 +365,28 @@
                                             En una industria que evoluciona rápidamente, reconocemos el valor de las asociaciones en el sector geoespacial para ofrecer soluciones innovadoras y abordar proyectos de gran envergadura. Nuestro objetivo es ser un socio confiable, ayudando a las empresas a ampliar sus capacidades sin la necesidad de recursos internos adicionales.
                                         </span>
                                     </p>
-
                                     <p class="wow fadeInUp">
                                         <span class="lang-en">
                                             Whether you are a well-established company looking to outsource specific GIS tasks or a startup needing technical expertise to scale your operations, our company offers the flexibility, precision, and dedication you require. Together, we can overcome industry challenges like workforce shortages, tight deadlines, and complex project demands.
                                         </span>
                                         <span class="lang-es" style="display:none;">
-                                            Ya sea que seas una empresa bien establecida que busca externalizar tareas específicas de GIS o una startup que necesita experiencia técnica para escalar tus operaciones, nuestra empresa ofrece la flexibilidad, precisión y dedicación que requieres. Juntos, podemos superar desafíos de la industria como la escasez de mano de obra, plazos ajustados y demandas de proyectos complejos.
+                                            Ya sea que seas una empresa bien establecida que busca externalizar tareas específicas de GIS o una startup que necesita experiencia técnica para escalar sus operaciones, nuestra empresa ofrece la flexibilidad, precisión y dedicación que requieres. Juntos, podemos superar desafíos de la industria como la escasez de mano de obra, plazos ajustados y demandas de proyectos complejos.
                                         </span>
                                     </p>
-
                                     <p class="wow fadeInUp">
                                         <span class="lang-en">
                                             Let’s build a future where geospatial data drives smarter decisions. By partnering with us, you gain a committed ally ready to grow alongside your business, ensuring mutual success in a competitive market.
                                         </span>
                                         <span class="lang-es" style="display:none;">
-                                            Construyamos un futuro donde los datos geoespaciales impulsen decisiones más inteligentes. Al asociarte con nosotros, obtienes un aliado comprometido listo para crecer junto a tu negocio, asegurando el éxito mutuo en un mercado competitivo.
+                                            Construyamos un futuro donde los datos geoespaciales impulsen decisiones más inteligentes. Al asociarte con nosotros, obtienes un aliado comprometido, listo para crecer junto a tu negocio y asegurar el éxito mutuo en un mercado competitivo.
                                         </span>
                                     </p>
-
                                     <div class="hst-btn">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#contactModal">
                                             <span class="lang-en">PARTNER WITH US</span>
                                             <span class="lang-es" style="display:none;">ASÓCIATE CON NOSOTROS</span>
                                         </button>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -388,103 +398,106 @@
         <!-- Sección "Our Target Market" -->
         <section id="our-project" class="sections">
             <div class="container">
-
                 <div class="heading">
                     <div class="title text-center arrow-left wow fadeInLeft">
                         <h4>
                             <span class="lang-en">Our Target Market</span>
                             <span class="lang-es" style="display:none;">Nuestro Mercado Objetivo</span>
                         </h4>
-                        <img class="hidden-xs wow fadeInRight" src="assets/images/right-arrow.png" alt="" />
+                        <img class="hidden-xs wow fadeInRight" src="assets/images/right-arrow.png" alt="Right Arrow" />
                     </div>
                 </div>
-
                 <div class="row">
-
                     <div class="main-project text-center">
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/1.png" alt="Environmental Mapping" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/1.png" alt="Environmental Mapping" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Environmental Mapping</span>
                                     <span class="lang-es" style="display:none;">Mapeo Ambiental</span>
                                 </h5>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/2.png" alt="Urban Planning" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/2.png" alt="Urban Planning" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Urban Planning</span>
                                     <span class="lang-es" style="display:none;">Planificación Urbana</span>
                                 </h5>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/3.png" alt="Agricultural Monitoring" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/3.png" alt="Agricultural Monitoring" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Agricultural Monitoring</span>
                                     <span class="lang-es" style="display:none;">Monitoreo Agrícola</span>
                                 </h5>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/4.png" alt="Risk Analysis" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/4.png" alt="Risk Analysis" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Risk Analysis</span>
                                     <span class="lang-es" style="display:none;">Análisis de Riesgos</span>
                                 </h5>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/5.png" alt="Network Analysis" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/5.png" alt="Network Analysis" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Network Analysis</span>
                                     <span class="lang-es" style="display:none;">Análisis de Redes</span>
                                 </h5>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/6.png" alt="Education and Training Solutions" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/6.png" alt="Education and Training Solutions" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Education and Training</span>
                                     <span class="lang-es" style="display:none;">Educación y Capacitación</span>
                                 </h5>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/7.png" alt="Mining and Oil Industry" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/7.png" alt="Mining and Oil Industry" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Mining and Oil Industry</span>
                                     <span class="lang-es" style="display:none;">Industria Minera y Petrolera</span>
                                 </h5>
                             </div>
                         </div>
-
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="project-item wow fadeInUp">
-                                <div class="project-photo"><img src="assets/images/projects/8.png" alt="Carbon Mapping" /></div>
+                                <div class="project-photo">
+                                    <img src="assets/images/projects/8.png" alt="Carbon Mapping" />
+                                </div>
                                 <h5>
                                     <span class="lang-en">Carbon Mapping</span>
                                     <span class="lang-es" style="display:none;">Mapeo de Carbono</span>
                                 </h5>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </section>
@@ -492,11 +505,9 @@
         <!-- Sección "Our Team" -->
         <section id="our-team" class="sections">
             <div class="container">
-
                 <div class="heading">
                     <div class="title text-center arrow-left wow fadeInLeft">
-                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
-
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="Left Arrow" />
                         <h4 class="wow fadeInLeft">
                             <span class="lang-en">Our Research Team</span>
                             <span class="lang-es" style="display:none;">Nuestro Equipo de Investigación</span>
@@ -504,12 +515,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="container-fluid project-bg">
                 <div class="row">
-
                     <div class="main-team text-center">
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/1.png" alt="B. Alvarez M.Sc." />
@@ -523,7 +531,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/2.png" alt="J. Castro M.Sc." />
@@ -537,8 +544,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/4.png" alt="A. Loria M.Sc." />
@@ -552,8 +557,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/5.png" alt="K. Araya M.Sc." />
@@ -567,7 +570,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/6.png" alt="A. Marengo M.Sc." />
@@ -581,7 +583,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="col-md-4 col-sm-8 col-xs-16">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/11.png" alt="E. Acuña M.Eng" />
@@ -595,8 +596,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-16">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/12.png" alt="H. Porras M.Sc." />
@@ -610,8 +609,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-16">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/7.png" alt="O. Cabezudo M.Sc." />
@@ -625,8 +622,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/10.png" alt="F. Rivera B.Sc." />
@@ -640,7 +635,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/9.png" alt="K. Aguero B.Sc." />
@@ -654,8 +648,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/3.png" alt="M. Watson B.Sc." />
@@ -669,7 +661,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/8.png" alt="M. Azofeifa B.Sc." />
@@ -683,8 +674,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/13.png" alt="E. Granados B.Sc." />
@@ -698,8 +687,6 @@
                                 </p>
                             </div>
                         </div>
-
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/14.png" alt="A. Bogantes B.Sc." />
@@ -713,7 +700,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="col-md-4 col-sm-8 col-xs-12">
                             <div class="team-member wow fadeInUp">
                                 <img class="img-circle" src="assets/images/team/15.png" alt="S. Ramirez B.Sc." />
@@ -727,30 +713,30 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </section>
 
+
+
+
+
+
+
         <!-- Sección "Real-Time Support via Discord" -->
         <section id="our-supports" class="sections">
             <div class="container">
-
                 <div class="heading">
                     <div class="title text-center arrow-left wow fadeInLeft">
                         <h4 class="wow fadeInLeft">
                             <span class="lang-en">Real-Time Support via Discord</span>
                             <span class="lang-es" style="display:none;">Soporte en Tiempo Real vía Discord</span>
                         </h4>
-                        <img class="hidden-xs wow fadeInRight" src="assets/images/right-arrow.png" alt="" />
+                        <img class="hidden-xs wow fadeInRight" src="assets/images/right-arrow.png" alt="Right Arrow" />
                     </div>
                 </div>
-
-                <!-- Example row of columns -->
                 <div class="row">
-
                     <div class="col-sm-6 col-xs-12">
                         <div class="supports-content wow fadeInLeft">
                             <p>
@@ -763,48 +749,46 @@
                                     Nuestro equipo de soporte está disponible en tiempo real a través de Discord para asistirte con cualquier consulta o problema técnico que puedas encontrar. Únete a nuestra comunidad y obtén asistencia instantánea de nuestros expertos.
                                 </span>
                             </p>
-
                             <div class="spt-btn">
                                 <a href="https://discord.com/invite/examplelink" target="_blank" class="btn btn-primary btn-discord">
                                     <span class="lang-en">JOIN OUR DISCORD</span>
                                     <span class="lang-es" style="display:none;">ÚNETE A NUESTRO DISCORD</span>
                                 </a>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="col-sm-6 col-xs-12">
                         <div class="supports-img wow fadeInRight">
                             <img class="img-responsive" src="assets/images/supports-img.png" alt="Support Image" />
                         </div>
                     </div>
-
                 </div>
-
-            </div> <!-- /container -->       
+            </div>       
         </section>
-
-
 
         <!-- Sección "Our Features" -->
         <section id="our-feature" class="sections">
             <div class="container">
                 <div class="heading">
                     <div class="title text-center arrow-left wow fadeInLeft">
-                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
-
-                        <h4 class="wow fadeInLeft">Our Features</h4>
+                        <img class="hidden-xs" src="assets/images/left-arrow.png" alt="Left Arrow" />
+                        <h4 class="wow fadeInLeft">
+                            <span class="lang-en">Our Features</span>
+                            <span class="lang-es" style="display:none;">Nuestras Características</span>
+                        </h4>
                     </div>
                 </div>
-
                 <div class="feature-wrapper">
                     <div class="row">
-
                         <!-- Feature 1 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="features-content active wow fadeInUp"> 
-                                <h4><i class="fa fa-check-circle"></i><span>Quality Guaranteed</span></h4>
+                            <div class="features-content wow fadeInUp"> 
+                                <h4><i class="fa fa-check-circle"></i>
+                                    <span>
+                                        <span class="lang-en">Quality Guaranteed</span>
+                                        <span class="lang-es" style="display:none;">Calidad Garantizada</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         We guarantee scientific studies of the highest quality, following contemporary methodologies to ensure accurate and reliable results.
@@ -815,11 +799,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 2 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-users"></i><span>Payment Upon Satisfaction</span></h4>
+                                <h4><i class="fa fa-users"></i>
+                                    <span>
+                                        <span class="lang-en">Payment Upon Satisfaction</span>
+                                        <span class="lang-es" style="display:none;">Pago al Estar Satisfecho</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         We accept your payment only when you are 100% satisfied with the results, ensuring your peace of mind.
@@ -830,11 +818,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 3 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-comments-o"></i><span>Fluid Communication</span></h4>
+                                <h4><i class="fa fa-comments-o"></i>
+                                    <span>
+                                        <span class="lang-en">Fluid Communication</span>
+                                        <span class="lang-es" style="display:none;">Comunicación Fluida</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         We maintain open and clear communication channels to keep you informed and involved throughout the project.
@@ -845,11 +837,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 4 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-headphones"></i><span>Online Technical Support</span></h4>
+                                <h4><i class="fa fa-headphones"></i>
+                                    <span>
+                                        <span class="lang-en">Online Technical Support</span>
+                                        <span class="lang-es" style="display:none;">Soporte Técnico en Línea</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         Our technical support is available online through calls, video calls, and screen sharing to assist you promptly.
@@ -860,11 +856,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 5 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-credit-card"></i><span>Secure Online Payments</span></h4>
+                                <h4><i class="fa fa-credit-card"></i>
+                                    <span>
+                                        <span class="lang-en">Secure Online Payments</span>
+                                        <span class="lang-es" style="display:none;">Pagos en Línea Seguros</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         We offer 100% online payment methods, ensuring a clear and hassle-free billing process without any tax issues.
@@ -875,11 +875,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 6 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-graduation-cap"></i><span>Continuous Expert Training</span></h4>
+                                <h4><i class="fa fa-graduation-cap"></i>
+                                    <span>
+                                        <span class="lang-en">Continuous Expert Training</span>
+                                        <span class="lang-es" style="display:none;">Capacitación Continua de Expertos</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         Our experts are in constant training, with many completing master's and doctoral programs to stay ahead in the field.
@@ -890,11 +894,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 7 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-balance-scale"></i><span>Compliance with Standards</span></h4>
+                                <h4><i class="fa fa-balance-scale"></i>
+                                    <span>
+                                        <span class="lang-en">Compliance with Standards</span>
+                                        <span class="lang-es" style="display:none;">Cumplimiento de Normas</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         We adhere strictly to industry regulations and standards to ensure all our services are compliant and reliable.
@@ -905,11 +913,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 8 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-shield"></i><span>Data Protection and Privacy</span></h4>
+                                <h4><i class="fa fa-shield"></i>
+                                    <span>
+                                        <span class="lang-en">Data Protection and Privacy</span>
+                                        <span class="lang-es" style="display:none;">Protección de Datos y Privacidad</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         We implement robust data protection measures to safeguard your information and maintain your privacy.
@@ -920,11 +932,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 9 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-file-text-o"></i><span>Clear Terms and Conditions</span></h4>
+                                <h4><i class="fa fa-file-text-o"></i>
+                                    <span>
+                                        <span class="lang-en">Clear Terms and Conditions</span>
+                                        <span class="lang-es" style="display:none;">Términos y Condiciones Claros</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         Our terms and conditions are transparent and clearly outlined to prevent any misunderstandings.
@@ -935,11 +951,15 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 10 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-money"></i><span>Transparent Refund Policy</span></h4>
+                                <h4><i class="fa fa-money"></i>
+                                    <span>
+                                        <span class="lang-en">Transparent Refund Policy</span>
+                                        <span class="lang-es" style="display:none;">Política de Reembolso Transparente</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         We offer a clear and straightforward refund policy to ensure customer satisfaction and trust.
@@ -950,26 +970,34 @@
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 11 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-language"></i><span>Bilingual Service</span></h4>
+                                <h4><i class="fa fa-language"></i>
+                                    <span>
+                                        <span class="lang-en">Bilingual Service</span>
+                                        <span class="lang-es" style="display:none;">Servicio Bilingüe</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         Professionals trained in English and Spanish to give you the best service.
                                     </span>
                                     <span class="lang-es" style="display:none;">
-                                        Profesionales entrenados para atenderle en Inglés o Español.
+                                        Profesionales capacitados en inglés y español para ofrecerle el mejor servicio.
                                     </span>
                                 </p>
                             </div>
                         </div>
-
                         <!-- Feature 12 -->
                         <div class="col-md-4 col-sm-6 col-xs-12">
                             <div class="features-content wow fadeInUp"> 
-                                <h4><i class="fa fa-search"></i><span>International Experience</span></h4>
+                                <h4><i class="fa fa-search"></i>
+                                    <span>
+                                        <span class="lang-en">International Experience</span>
+                                        <span class="lang-es" style="display:none;">Experiencia Internacional</span>
+                                    </span>
+                                </h4>
                                 <p>
                                     <span class="lang-en">
                                         Our research team has worked in multiple countries spanning North, Central, and South America, the Caribbean, and Europe, bringing diverse perspectives and expertise.
@@ -980,81 +1008,73 @@
                                 </p>
                             </div>
                         </div>
-
                     </div>	
                 </div>		
             </div>
         </section>
 
-
-
-
-<!-- Nueva Sección "Where we are?" -->
-<section id="where-we-are" class="sections">
-    <div class="container">
-        <div class="heading">
-            <div class="title text-center arrow-left wow fadeInLeft">
-                <h4 class="wow fadeInLeft">
-                    <span class="lang-en">Where we are?</span>
-                    <span class="lang-es" style="display:none;">¿Dónde estamos?</span>
-                </h4>
-                <img class="hidden-xs wow fadeInRight" src="assets/images/right-arrow.png" alt="" />
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <!-- Mapa con iframe de Google Maps (vista satelital y zoom reducido) -->
-                <div id="map">
-                    <iframe
-                        width="100%"
-                        height="450"
-                        style="border:0;"
-                        loading="lazy"
-                        allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        src="https://maps.google.com/maps?q=138+American+Avenue,+Bismarck,+ND+58504&t=k&z=12&output=embed">
-                    </iframe>
+        <!-- Nueva Sección "Where we are?" -->
+        <section id="where-we-are" class="sections">
+            <div class="container">
+                <div class="heading">
+                    <div class="title text-center arrow-left wow fadeInLeft">
+                        <h4 class="wow fadeInLeft">
+                            <span class="lang-en">Where we are?</span>
+                            <span class="lang-es" style="display:none;">¿Dónde Estamos?</span>
+                        </h4>
+                        <img class="hidden-xs wow fadeInRight" src="assets/images/right-arrow.png" alt="Right Arrow" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- Mapa con iframe de Google Maps (vista satelital y zoom reducido) -->
+                        <div id="map">
+                            <iframe
+                                width="100%"
+                                height="450"
+                                style="border:0;"
+                                loading="lazy"
+                                allowfullscreen
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://maps.google.com/maps?q=138+American+Avenue,+Bismarck,+ND+58504&t=k&z=12&output=embed">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-
-
+        </section>
 
         <!-- Sección "Hire Us" -->
         <section id="hire-us" class="sections">
-
             <div class="container">
-
-                <!-- Example row of columns -->
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="hire-content wow fadeInUp">
-                            <div class="img-overlay">
-
-                                <div class="creative-works">
-                                    <h3>
-                                        <span class="lang-en">NEED ADVANCED GEOSPATIAL SOLUTIONS?</span>
-                                        <span class="lang-es" style="display:none;">¿NECESITAS SOLUCIONES GEOSPACIALES AVANZADAS?</span>
-                                    </h3>
-                                    <button class="btn hire-btn btn-primary" data-toggle="modal" data-target="#contactModal">
-                                        <span class="lang-en">HIRE US</span>
-                                        <span class="lang-es" style="display:none;">CONTRÁTANOS</span>
-                                    </button>
-                                </div>
-
-                            </div>
-
-                        </div>
-
+                <div class="heading text-center">
+                    <div class="title arrow-right">
+                        <h4 class="wow fadeInLeft">
+                            <span class="lang-en">CONTACT</span>
+                            <span class="lang-es" style="display:none;">CONTACTO</span>
+                        </h4>
+                        <img class="hidden-xs wow fadeInRight" src="assets/images/right-arrow.png" alt="Right Arrow" />
                     </div>
                 </div>
-
-            </div> <!-- /container -->  
-
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12 text-center">
+                        <div class="contact-info wow fadeInUp">
+                            <p><strong>
+                                <span class="lang-en">Email:</span>
+                                <span class="lang-es" style="display:none;">Correo:</span>
+                            </strong> mapchinelearning@gmail.com</p>
+                            <p><strong>
+                                <span class="lang-en">Phone:</span>
+                                <span class="lang-es" style="display:none;">Teléfono:</span>
+                            </strong> +1 701 964 3253</p>
+                            <p><strong>
+                                <span class="lang-en">Address:</span>
+                                <span class="lang-es" style="display:none;">Dirección:</span>
+                            </strong> 138 American Avenue, Bismarck, ND, USA, 58504</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Botón Scroll Up -->
@@ -1067,120 +1087,101 @@
         <!-- Footer -->
         <footer id="footer" class="footer">
             <div class="container">
-
                 <div class="row">
-
                     <div class="socio-copyright">
-
                         <div class="social">
                             <a target="_blank" href="https://www.linkedin.com/company/mapchine"><i class="fa fa-linkedin"></i></a>
                             <a target="_blank" href="https://www.instagram.com/mapchine"><i class="fa fa-instagram"></i></a>
                             <a target="_blank" href="https://www.youtube.com/channel/yourchannel"><i class="fa fa-youtube"></i></a>
                         </div>
-
                         <p>
                             <span class="lang-en">© 2025 MAPCHINE LLC. All rights reserved.</span>
                             <span class="lang-es" style="display:none;">© 2025 MAPCHINE LLC. Todos los derechos reservados.</span>
                         </p>
                     </div>
-
                 </div>	
             </div>
-
         </footer>
 
         <!-- Contact Form Modal -->
         <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <form action="process_form.php" method="POST" id="contactForm">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h4 class="modal-title" id="contactModalLabel">
-                      <span class="lang-en">Contact Us</span>
-                      <span class="lang-es" style="display:none;">Contáctanos</span>
-                  </h4>
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <form action="process_form.php" method="POST" id="contactForm">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="contactModalLabel">
+                                <span class="lang-en">Contact Us</span>
+                                <span class="lang-es" style="display:none;">Contáctanos</span>
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="name">
+                                    <span class="lang-en">Name</span>
+                                    <span class="lang-es" style="display:none;">Nombre</span>
+                                </label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    <span class="lang-en">Email</span>
+                                    <span class="lang-es" style="display:none;">Correo Electrónico</span>
+                                </label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">
+                                    <span class="lang-en">Subject</span>
+                                    <span class="lang-es" style="display:none;">Asunto</span>
+                                </label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">
+                                    <span class="lang-en">Message</span>
+                                    <span class="lang-es" style="display:none;">Mensaje</span>
+                                </label>
+                                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">
+                                <span class="lang-en">Close</span>
+                                <span class="lang-es" style="display:none;">Cerrar</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <span class="lang-en">Send Message</span>
+                                <span class="lang-es" style="display:none;">Enviar Mensaje</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="modal-body">
-
-                  <div class="form-group">
-                    <label for="name">
-                        <span class="lang-en">Name</span>
-                        <span class="lang-es" style="display:none;">Nombre</span>
-                    </label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="email">
-                        <span class="lang-en">Email</span>
-                        <span class="lang-es" style="display:none;">Correo Electrónico</span>
-                    </label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="subject">
-                        <span class="lang-en">Subject</span>
-                        <span class="lang-es" style="display:none;">Asunto</span>
-                    </label>
-                    <input type="text" class="form-control" id="subject" name="subject" required>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="message">
-                        <span class="lang-en">Message</span>
-                        <span class="lang-es" style="display:none;">Mensaje</span>
-                    </label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                  </div>
-
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">
-                      <span class="lang-en">Close</span>
-                      <span class="lang-es" style="display:none;">Cerrar</span>
-                  </button>
-                  <button type="submit" class="btn btn-primary">
-                      <span class="lang-en">Send Message</span>
-                      <span class="lang-es" style="display:none;">Enviar Mensaje</span>
-                  </button>
-                </div>
-              </form>
             </div>
-          </div>
         </div>
         <!-- End of Contact Form Modal -->
 
         <!-- Scripts -->
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
-
         <!-- Plugins Dependientes de jQuery -->
         <script src="assets/js/vendor/jquery.waypoints.min.js"></script>
         <script src="assets/js/vendor/owl.carousel.min.js"></script>
         <script src="assets/js/vendor/jquery.localScroll.min.js"></script>
         <script src="assets/js/vendor/jquery.counterup.min.js"></script>
         <script src="assets/js/vendor/wow.min.js"></script>
-
         <!-- Bootstrap JS -->
         <script src="assets/js/vendor/bootstrap.min.js"></script>
-
         <!-- Leaflet JS -->
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
                 integrity="sha256-o9N1j6IT3Q0c2tHCP9P5C9bJDw+Q6DkJ+6Wc8m8Zt3A="
                 crossorigin=""></script>
-
-        <!-- Animate.css ya incluido arriba -->
-
         <!-- OWL Carousel JS (si lo usas) -->
         <script src="assets/js/owl.carousel.min.js"></script>
-
         <!-- Plugins Personalizados -->
         <script src="assets/js/plugins.js"></script>
-
         <!-- Script Principal -->
         <script src="assets/js/main.js"></script>
 
@@ -1191,11 +1192,12 @@
                 const langElementsEn = document.querySelectorAll('.lang-en');
                 const langElementsEs = document.querySelectorAll('.lang-es');
 
-                // Check for saved language preference
+                // Leer la preferencia guardada o por defecto 'en'
                 let currentLang = localStorage.getItem('language') || 'en';
                 setLanguage(currentLang);
 
                 toggleButton.addEventListener('click', function() {
+                    // Alterna entre 'en' y 'es'
                     currentLang = currentLang === 'en' ? 'es' : 'en';
                     setLanguage(currentLang);
                 });
@@ -1204,43 +1206,47 @@
                     if(lang === 'en') {
                         langElementsEn.forEach(el => el.style.display = 'inline');
                         langElementsEs.forEach(el => el.style.display = 'none');
-                        toggleButton.innerHTML = '<span class="lang-en">ES</span><span class="lang-es" style="display:none;">EN</span>';
+                        // Cuando está en inglés, el botón muestra "EN"
+                        toggleButton.innerHTML = '<span class="lang-en">EN</span><span class="lang-es" style="display:none;">ES</span>';
                     } else {
                         langElementsEn.forEach(el => el.style.display = 'none');
                         langElementsEs.forEach(el => el.style.display = 'inline');
-                        toggleButton.innerHTML = '<span class="lang-en" style="display:none;">ES</span><span class="lang-es">EN</span>';
+                        // Cuando está en español, el botón muestra "ES"
+                        toggleButton.innerHTML = '<span class="lang-en" style="display:none;">EN</span><span class="lang-es">ES</span>';
                     }
                     localStorage.setItem('language', lang);
                 }
             });
         </script>
 
-        <!-- Inicialización del Mapa -->
+        <!-- Inicialización del Carrusel (sin flechas) -->
+        <script>
+            $(document).ready(function(){
+                $('#carousel-example-generic').carousel({
+                    interval: 3000,
+                    pause: "hover"
+                });
+            });
+        </script>
+
+        <!-- Inicialización del Mapa (opcional) -->
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Crear el mapa centrado en una ubicación promedio
                 var map = L.map('map').setView([20.0, -100.0], 3); // Coordenadas centradas en el Caribe
-
                 // Añadir la capa de OpenStreetMap
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(map);
-
                 // Función para crear marcadores con popups
                 function addMarker(lat, lon, popupContent) {
                     L.marker([lat, lon]).addTo(map)
                         .bindPopup(popupContent)
                         .openPopup();
                 }
-
                 // Añadir Marcadores
-                // Puerto Rico
                 addMarker(18.2208, -66.5901, '<b>Puerto Rico</b>');
-
-                // North Dakota
                 addMarker(47.5515, -101.0020, '<b>North Dakota, USA</b>');
-
-                // Costa Rica
                 addMarker(9.7489, -83.7534, '<b>Costa Rica</b>');
             });
         </script>
