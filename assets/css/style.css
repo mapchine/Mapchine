@@ -2,6 +2,15 @@
    Custom Styles - Soil-Focused Natural Colors with Enhanced Readability
    ========================================================================== */
 
+/* Evitar que se muestre el caret o outline en elementos interactivos */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: none !important;
+    caret-color: transparent;
+}
+
 html,
 body {
     background-color: #F5F5F5; /* Gris pálido */
@@ -47,15 +56,27 @@ img {
     max-width: 100%;
 }
 
+/* AQUÍ AÑADIMOS CURSOR: POINTER PARA ENLACES Y BOTONES */
 a,
 a:hover,
 a:active,
 a:focus,
 button,
 a span {
+    cursor: pointer; /* <-- Ajuste global importante */
     text-decoration: none;
     outline: none;
     transition: 0.2s ease-in-out;
+}
+
+/* FORZAMOS cursor pointer y SIN selección de texto en los enlaces del menú */
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+    cursor: pointer !important;    /* Mano en vez de cursor de texto */
+    user-select: none !important;  /* Evita la barra vertical y selección */
+    outline: none !important;      /* Quita contorno de enfoque */
 }
 
 .btn.extra-width {
@@ -378,11 +399,11 @@ section .subtitle-half h5 {
     width: 230px;
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: 300; /* Ajustado para consistencia */
+    font-weight: 300;
     margin: -30px 0 20px 0;
     text-align: center;
     padding-top: 10px;
-    font-family: 'Lane', sans-serif; /* Mismo tipo de fuente que h1-h3 */
+    font-family: 'Lane', sans-serif;
 }
 
 .btn-primary span i {
@@ -466,24 +487,24 @@ h1 span {
 
 .navbar-default .navbar-nav > .active a:hover {
     background-color: transparent;
-    color: #ffffff; /* Blanco para contraste */
+    color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #ffffff; /* Ocre oscuro */
+    color: #ffffff;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-    color: #ffffff; /* Blanco para contraste */
+    color: #ffffff; 
 }
 
 .contact-number {
     font-size: 12px;
     font-weight: 600;
-    color: #000000; /* Ocre oscuro */
+    color: #000000;
     margin-right: 14px;
 }
 
@@ -512,13 +533,9 @@ h1 span {
     text-transform: uppercase;
 }
 
+/* Ocultar indicadores del carrusel */
 .carousel-indicators {
-    bottom: -50px;
-}
-
-.carousel-indicators li {
-    background: #A52A2A; /* Marrón rojizo */
-    border: 0;
+    display: none !important;
 }
 
 /* Our Portfolio Section */
@@ -549,7 +566,7 @@ h1 span {
 .portfolio .portfolio-item .pt-btn {
     background: #A52A2A; /* Ocre oscuro */
     padding: 18px 40px;
-    color: #ffffff; /* Blanco para texto legible */
+    color: #ffffff; 
     font-weight: bold;
     text-transform: uppercase;
     transition: 0.5s;
@@ -557,8 +574,8 @@ h1 span {
 }
 
 .portfolio .portfolio-item .pt-btn:hover {
-    background: #A52A2A; /* Ocre oscuro */
-    color: #ffffff; /* Blanco para texto legible */
+    background: #A52A2A; 
+    color: #ffffff; 
 }
 
 /* Works Area */
@@ -613,7 +630,7 @@ h1 span {
 }
 
 .main-history .history-img {
-    background: none; /* Eliminado 'hidden' inválido */
+    background: none;
 }
 
 .history-wrapper {
@@ -627,7 +644,7 @@ h1 span {
 .main-history .history-content .hst-btn button {
     border-radius: 0;
     background: #A52A2A; /* Marrón rojizo */
-    color: #ffffff; /* Blanco */
+    color: #ffffff;
     font-size: 12px;
     font-weight: 500;
     padding: 15px;
@@ -641,23 +658,33 @@ h1 span {
 
 /* Nuestra Nueva Sección "Where we are?" */
 #where-we-are {
-    background-color: #ffffff; /* Fondo blanco para contraste */
+    background-color: #ffffff; /* Fondo blanco */
     color: #000000; /* Texto negro */
 }
 
+/* Ajusta el contenedor que incluye el iframe del mapa */
 #where-we-are #map {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0px auto 0;
     height: 500px;
+    border: none !important;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+}
+
+/* Asegúrate de que el iframe llene el contenedor */
+#where-we-are #map iframe {
     width: 100%;
-    border: 2px solid #A52A2A; /* Marrón rojizo */
-    border-radius: 8px;
-    margin-top: 30px;
+    height: 100%;
+    border: none;
+    display: block;
 }
 
 /* Our Project Area */
 .main-project {
     overflow: hidden;
     padding: 40px;
-    /* background: #hidden; Eliminado valor inválido */
 }
 
 .main-project .project-item {
@@ -681,26 +708,52 @@ h1 span {
 /* Our Team Area */
 .project-bg {
     background-color: #A52A2A; /* Marrón rojizo */
-    padding: 60px 0 30px 0;
+    padding: 40px 15px;       /* Reduce padding y agrega espacio lateral */
+    max-width: 1200px;        /* Ancho máximo */
+    margin: 0 auto;           /* Centra el contenedor */
 }
 
+/* Ajustes generales de cada 'team-member' */
 .team-member {
-    margin-bottom: 20px;
+    margin-bottom: 20px;      /* Espacio debajo de cada tarjeta de miembro */
+    text-align: center;       /* Centra el contenido dentro de cada tarjeta */
 }
 
+/* Ajuste de estilos en los títulos y párrafos */
 .main-team .team-member h5 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-    color: #D3D3D3; /* Gris pálido */
+    color: #D3D3D3; 
     text-transform: uppercase;
-    margin: 20px 0;
+    margin: 15px 0; 
 }
 
 .main-team .team-member p {
-    font-size: 14px;
-    color: #D3D3D3; /* Gris pálido */
+    font-size: 13px;
+    color: #D3D3D3; 
     text-transform: uppercase;
-    margin-top: -15px;
+    margin-top: -10px; 
+}
+
+/* FLEXBOX: distribuye a 3 miembros por fila en pantallas >= 768px */
+@media (min-width: 768px) {
+    .main-team {
+        display: flex;
+        flex-wrap: wrap;               /* Permite que las tarjetas salten a la siguiente fila si exceden el ancho */
+        justify-content: space-between;/* Espacia las tarjetas horizontalmente */
+    }
+
+    .main-team .col-md-4,
+    .main-team .col-sm-8,
+    .main-team [class*="col-"] {
+        float: none !important;        /* Anula el float de Bootstrap */
+        display: flex;                 /* Para que el contenido interno también sea flexible si lo deseas */
+        flex-direction: column;        /* Alinea la imagen y texto en columna */
+        align-items: center;           /* Centra en horizontal el contenido dentro */
+        box-sizing: border-box;        
+        width: 32%;                    /* Aproximadamente 3 columnas (3 x 32% + márgenes) */
+        margin-bottom: 20px;           /* Separación vertical entre filas */
+    }
 }
 
 /* Supports & Update Area */
@@ -709,9 +762,9 @@ h1 span {
 }
 
 .supports-content .spt-btn button {
-    background: #A52A2A; /* Marrón rojizo */
+    background: #A52A2A; 
     padding: 15px 30px;
-    color: #A52A2A; /* Ocre oscuro */
+    color: #A52A2A; 
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
@@ -719,8 +772,8 @@ h1 span {
 }
 
 .supports-content .spt-btn button:hover {
-    background: #A52A2A; /* Ocre oscuro */
-    color: #ffffff; /* Blanco para texto legible */
+    background: #A52A2A; 
+    color: #ffffff;
 }
 
 /* Hire Us Area */
@@ -733,14 +786,14 @@ h1 span {
 }
 
 .img-overlay {
-    background-color: rgba(80, 0, 0, 0.5); /* Ocre oscuro semitransparente */
+    background-color: rgba(80, 0, 0, 0.5); 
     width: 100%;
     min-height: 500px;
     position: relative;
 }
 
 .creative-works {
-    background: #A52A2A; /* Marrón rojizo */
+    background: #A52A2A; 
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -752,14 +805,14 @@ h1 span {
     font-size: 22px;
     font-weight: 500;
     text-transform: uppercase;
-    color: #ffffff; /* Blanco para texto legible */
+    color: #ffffff;
     margin: 30px 0 40px 50px;
     float: left;
 }
 
 .creative-works .hire-btn {
-    background: #A52A2A; /* Marrón rojizo */
-    color: #ffffff; /* Blanco para el texto */
+    background: #A52A2A; 
+    color: #ffffff;
     font-size: 20px;
     font-weight: 500;
     border-radius: 0;
@@ -772,8 +825,8 @@ h1 span {
 }
 
 .creative-works .hire-btn:hover {
-    background: #A52A2A; /* Ocre oscuro */
-    color: #000000; /* Negro */
+    background: #A52A2A; 
+    color: #000000; 
 }
 
 /* Footer Area */
@@ -783,7 +836,7 @@ h1 span {
 }
 
 .main-footer .footer-item h2 {
-    color: #ffffff; /* Beige tierra */
+    color: #ffffff; 
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -791,12 +844,19 @@ h1 span {
 .main-footer .footer-item ul li a {
     font-size: 16px;
     line-height: 32px;
-    color: #ffffff; /* Arcilla */
+    color: #ffffff;
 }
 
 .main-footer .footer-item ul li a:hover {
-    color: #ffffff; /* Blanco para contraste */
+    color: #ffffff;
 }
+
+
+.socio-copyright {
+    text-align: center;
+}
+
+
 
 .socio-copyright .social {
     width: 100%;
@@ -804,36 +864,53 @@ h1 span {
     text-align: center;
 }
 
-.socio-copyright .social a i {
-    background: #ffffff; /* Arcilla */
+socio-copyright .social a i {
+    background: #ffffff;
     border-radius: 2px;
     height: 35px;
     width: 35px;
-    color: #000000; /* Negro para iconos */
+    color: #000000; 
     transition: 0.5s;
     padding-top: 11px;
 }
 
-.socio-copyright .social a:hover i {
-    background: #A52A2A; /* Marrón rojizo */
-    color: #ffffff; /* Blanco para texto legible */
+socio-copyright .social a:hover i {
+    background: #A52A2A; 
+    color: #ffffff; 
 }
 
-.socio-copyright p {
-    color: #A52A2A; /* Arcilla */
-    font-size: 15px;
-    text-align: center;
-    margin-top: 10px;
+.social a i {
+    font-size: 30px;    /* Aumenta el tamaño de fuente para agrandar el ícono */
+    width: 40px;        /* Ajusta el ancho */
+    height: 40px;       /* Ajusta la altura */
+    line-height: 40px;  /* Alinea verticalmente el ícono si es un contenedor cuadrado */
+    text-align: center; /* Centra el ícono en horizontal */
+    border-radius: 50%; /* Opcional, para dar forma circular */
+    display: inline-block; /* Asegura que width/height funcionen con i */
+    transition: 0.3s;   /* Transición suave para hover, etc. */
 }
+
+/* Si deseas cambiar el color de fondo o de texto al pasar el mouse */
+.social a i:hover {
+    background-color: #000;  /* Ejemplo de fondo negro */
+    color: #fff;             /* Texto blanco */
+}
+
+
+
+
+
+
+
 
 /* Scroll Up */
 .scrollup {
     width: 40px;
     height: 40px;
     text-align: center;
-    color: #ffffff; /* Blanco para texto legible */
+    color: #ffffff; 
     font-size: 30px;
-    background: #000000; /* Negro */
+    background: #000000; 
     position: fixed;
     bottom: 30px;
     right: 50px;
@@ -844,15 +921,15 @@ h1 span {
 }
 
 .scrollup:hover {
-    background: #000000; /* Negro */
-    color: #ffffff; /* Blanco para texto legible */
+    background: #000000; 
+    color: #ffffff;
     transform: scale(1.1);
 }
 
 /* Botón de Discord */
 .btn-discord {
-    background-color: #A52A2A; /* Marrón rojizo */
-    color: #ffffff; /* Blanco para el texto */
+    background-color: #A52A2A; 
+    color: #ffffff; 
     border: none;
     font-weight: 300;
     font-family: 'Lane', sans-serif;
@@ -863,8 +940,8 @@ h1 span {
 }
 
 .btn-discord:hover {
-    background-color: #000000; /* Negro */
-    color: #ffffff; /* Blanco para texto */
+    background-color: #000000; 
+    color: #ffffff; 
 }
 
 /* Leaflet Map Responsiveness */
