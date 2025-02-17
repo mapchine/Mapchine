@@ -889,12 +889,12 @@ socio-copyright .social a:hover i {
     border-radius: 50%;       /* Forma circular */
     display: inline-block;    /* Para que se apliquen width/height */
     transition: 0.3s;         /* Transición suave */
-    background-color: #CD853F; /* Color base (arcilla) */
+    background-color: #000; /* Color base (arcilla) */
     color: #ffffff;           /* Color del ícono (blanco) */
 }
 
 .social a i:hover {
-    background-color: #A52A2A; /* Tono más oscuro al hacer hover */
+    background-color: #00FFFF; /* Tono más oscuro al hacer hover */
     color: #ffffff;
 }
 
@@ -950,5 +950,27 @@ socio-copyright .social a:hover i {
     }
 }
 
+/* Transición suave para el efecto hover */
+#our-portfolio .portfolio-img {
+  transition: all 0.3s ease;
+}
+
+/* Efecto de resplandor turquesa fosforescente al pasar el mouse */
+#our-portfolio .portfolio-img:hover {
+  transform: scale(1.05); /* Opcional: un pequeño aumento de tamaño */
+  box-shadow: 0 0 15px 5px #40E0D0; /* Brillo turquesa */
+}
+
+
+/* Efecto de transición en las imágenes con enlace */
+.team-linkedin {
+  transition: all 0.3s ease;
+}
+
+/* Resplandor celeste al pasar el mouse */
+.team-linkedin:hover {
+  box-shadow: 0 0 10px 5px #00FFFF; /* Color celeste */
+  transform: scale(1.05); /* Opcional: aumenta ligeramente el tamaño */
+}
 
 
