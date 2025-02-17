@@ -91,4 +91,6 @@ jQuery(document).ready(function ($) {
             pause: "hover"  // Pausa el carrusel al pasar el mouse
         });
     }
+
+
 });
